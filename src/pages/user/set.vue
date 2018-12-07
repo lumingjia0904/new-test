@@ -1,23 +1,21 @@
 <template>
   <div class="hello">
     <!-- <img src="../../assets/logo.png"> -->
-    <h1>index</h1>
-    <router-link to="/user">to user2</router-link>
-    <router-link to="/home">to home2</router-link>
+    <h1>set</h1>
   </div>
 </template>
 
 <script>
 import core from 'core'
 export default {
-  name: 'index',
+  name: 'set',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   },
   mounted:function(){
-    console.log(core)
+    
   }
 }
 </script>

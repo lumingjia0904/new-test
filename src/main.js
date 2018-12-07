@@ -16,12 +16,19 @@ Vue.use(VueRouter);
 /* eslint-disable no-new */
 const router = new VueRouter({
   routes,
-  mode: 'history',
+  mode: 'hash',
   base: '/',
 });
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  render: h => h(App)
 })
+router.beforeEach(({meta, path}, from, next) => {
+  // console.log('跳转前')
+  next();
+});
+
+router.afterEach(({meta, path}, from) => {
+  // console.log('跳转后')
+});

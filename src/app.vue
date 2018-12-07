@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
+  <div id="index">
     <img src="./assets/logo.png">
+    
     <!-- 页面缓存 -->
     <keep-alive>
         <router-view></router-view>
@@ -10,7 +11,7 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'index'
 }
 </script>
 
