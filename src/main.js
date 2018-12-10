@@ -6,6 +6,7 @@ import VueRouter from 'vue-router';
 import components from './components/'; //加载公共组件
 import routes from './router/';
 import core from "./core";
+import store from './store'
 Vue.config.productionTip = false
 
 Object.keys(components).forEach((key) => {
@@ -13,12 +14,14 @@ Object.keys(components).forEach((key) => {
   Vue.component(`l${name}`, components[key])
 });
 Vue.use(VueRouter);
+var store = new Vuex.Store( storeInfo );
 /* eslint-disable no-new */
 const router = new VueRouter({
   routes,
   mode: 'hash',
   base: '/',
 });
+
 new Vue({
   el: '#app',
   router,
