@@ -8,8 +8,10 @@ import components from './components/'; //加载公共组件
 import routes from './router/';
 import core from "./core";
 import storeInfo from './store'
-Vue.config.productionTip = false
+import ElementUI from 'element-ui';
 
+Vue.config.productionTip = false
+Vue.use(ElementUI);
 Object.keys(components).forEach((key) => {
   var name = key.replace(/(\w)/, (v) => v.toUpperCase()); //首字母大写
   Vue.component(`l${name}`, components[key])

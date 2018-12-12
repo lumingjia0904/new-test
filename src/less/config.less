@@ -1,0 +1,80 @@
+@text: #222;
+@main: #80bd01;
+
+@line-height-normal: 1.1rem;
+@line-height-small: 0.95rem;
+
+//@color-text: #666666;
+@color-text: #4B4B4B;
+@color-background:#333333;
+@color-active: #FF5263;
+@color-red: #FF5263;
+@color-grew: #999999;
+//@color-black: #333333;
+@color-black: #333333;
+@color-border: #E5E5E5;
+@color-topBar: #1B1A1F;
+
+
+
+
+@good-base:#D0021B;
+@red-base:#e61128;
+@gray-light: #999999;
+@gray-line: #f5f5f5;
+@black-base:#333333;
+
+@border-color: #eee;
+@border-color-deep: #ddd;
+@border-color-ef:#efefef;
+
+
+@font-size-small: 12px;
+@font-size-text: 14px;
+@font-size-normal: .7rem;
+@font-size-large: 16px;
+//@font-family: 'Microsoft YaHei','Microsoft JhengHei','SimHei';
+//@font-family: "Arial","sans-serif";
+@font-family: 'PingFang SC',"Arial","sans-serif";
+@border-radius: 2px;
+
+
+
+@color-light-gray: #999999;
+
+
+
+
+.touchScroll-x{
+    -webkit-overflow-scrolling : touch;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.translate(@x; @y) {
+    -webkit-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y); // IE9 only
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+}
+
+.transition-transform(@transition) {
+    -webkit-transition: -webkit-transform @transition;
+    -moz-transition: -moz-transform @transition;
+    -o-transition: -o-transform @transition;
+    transition: transform @transition;
+}
+
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+    box-shadow: @shadow;
+}
+
+.opacity(@opacity) {
+    opacity: @opacity;
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius:@radius;
+    border-radius:@radius;
+}
