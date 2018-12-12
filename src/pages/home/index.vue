@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <!-- <img src="../../assets/logo.png"> -->
-    <h1>index</h1>
+    <img :src="imgSrc">
+    <h1>{{msg}}</h1>
+    <button @click="change"></button>
     <router-link to="/user">to user2</router-link>
     <router-link to="/home">to home2</router-link>
   </div>
@@ -13,11 +14,25 @@ export default {
   name: 'index',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      imgSrc:require('../../assets/logo.png')
     }
   },
   mounted:function(){
-    console.log(core)
+    
+    this.imgSrc=this.$store.state.userInfo.img;
+    this.$store.commit('SET_AGE',30);
+
+    // this.msg=this.$store.state.userInfo.info.name;
+    // this.msg=this.$store.state.userInfo.info.name;
+    // console.log(this.$store.getters)
+    this.msg=this.$store.getters["GET_USER_NAME"];
+    console.log(this.$store.state.userInfo)
+  },
+  methods:{
+    change(){
+
+    }
   }
 }
 </script>

@@ -2,11 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './app'
+import Vuex from 'vuex';
 import VueRouter from 'vue-router';
 import components from './components/'; //加载公共组件
 import routes from './router/';
 import core from "./core";
-import store from './store'
+import storeInfo from './store'
 Vue.config.productionTip = false
 
 Object.keys(components).forEach((key) => {
@@ -14,7 +15,10 @@ Object.keys(components).forEach((key) => {
   Vue.component(`l${name}`, components[key])
 });
 Vue.use(VueRouter);
+Vue.use( Vuex );
 var store = new Vuex.Store( storeInfo );
+
+
 /* eslint-disable no-new */
 const router = new VueRouter({
   routes,
@@ -25,6 +29,7 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
 router.beforeEach(({meta, path}, from, next) => {

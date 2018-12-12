@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
     
     <!-- 页面缓存 -->
     <keep-alive>
