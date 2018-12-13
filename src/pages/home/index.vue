@@ -8,7 +8,12 @@
         <h3>{{ item }}</h3>
       </el-carousel-item>
     </el-carousel>
-    <img :src="imgSrc">
+    <div>
+      <img
+        :src="imgSrc"
+      >
+    </div>
+
     <h1>{{msg}}</h1>
     <button @click="change"></button>
 
@@ -44,10 +49,13 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="less" scoped rel="stylesheet/less" type="text/css">
 h1,
 h2 {
   font-weight: normal;
+  span {
+    font-size: 100px;
+  }
 }
 ul {
   list-style-type: none;
@@ -60,19 +68,19 @@ li {
 a {
   color: #42b983;
 }
- .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-  }
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+}
 
-  .el-carousel__item:nth-child(2n) {
-     background-color: #99a9bf;
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-     background-color: #d3dce6;
-  }
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
 </style>
