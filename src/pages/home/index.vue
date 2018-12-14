@@ -41,6 +41,11 @@ export default {
     // console.log(this.$store.getters)
     this.msg = this.$store.getters["GET_USER_NAME"];
     console.log(this.$store.state.userInfo);
+    core.api.index.info({})
+      .then(res => {
+        console.log(res);
+        this.dataShow = res.data;
+      })
   },
   methods: {
     change() {}

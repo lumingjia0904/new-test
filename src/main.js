@@ -9,6 +9,8 @@ import routes from './router/';
 import core from "./core";
 import storeInfo from './store'
 import ElementUI from 'element-ui';
+//使用真实接口时注释
+require('./mock.js')
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
