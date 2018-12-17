@@ -1,8 +1,8 @@
 
 import Mock from 'mockjs' // 引入mockjs
-
+import info from  './data/num.json'
 const Random = Mock.Random // Mock.Random 是一个工具类，用于生成各种随机数据
- 
+ console.log(info)
 let data = [] // 用于接受生成数据的数组
 let size = [
   '300x250', '250x250', '240x400', '336x280', 
@@ -31,4 +31,4 @@ for(let i = 0; i < 10; i ++) { // 可自定义生成的个数
   data.push(template)
 }
  
-Mock.mock('/data/index', 'post', data) // 根据数据模板生成模拟数据
+Mock.mock('/data/index.html', 'post', data) // 根据数据模板生成模拟数据
